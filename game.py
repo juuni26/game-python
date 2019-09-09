@@ -147,7 +147,13 @@ PI = 3.141592653
 BLACK = (0, 0, 0)
 BLUE = (0,   0, 255)
 WHITE = (255, 255, 255)
+my_color = (21, 21, 21)
 print(BLACK, BLUE)
+
+
+frame_count = 0
+frame_rate = 60
+start_time = 90
 
 size = [700, 500]
 screen = pygame.display.set_mode(size)
@@ -171,11 +177,66 @@ while not done:  # looping biar window ga ke closed sampai di exit
     # klo ga bakal ke apus ama command ini .
 
     # --- Drawing code should go here
-    pygame.draw.rect(screen, BLUE, [50, 20, 500, 100], 0)
+    # pygame.draw.rect(screen, BLUE, [50, 110, 10, 10], 5)
+
+    # for y in range(0, 100, 10):
+    #     pygame.draw.line(screen, BLACK, [0, 10+y], [100, 110], 5)
+
+    # for y in range(0, 100, 10):
+    #     pygame.draw.line(screen, BLACK, [200, 10+y], [100, 110], 5)
+
+    # for i in range(200):
+
+    #     radians_x = i / 20
+    #     radians_y = i / 6
+
+    #     x = int(75 * sin(radians_x)) + 100
+    #     y = int(75 * cos(radians_y)) + 200
+
+    #     pygame.draw.line(screen, BLACK, [x, y], [x+5, y], 5)
+
+    # for x_offset in range(30, 300, 30):
+    #     pygame.draw.line(screen, BLACK, [x_offset, 100], [x_offset-10, 90], 2)
+    #     pygame.draw.line(screen, BLACK, [x_offset, 90], [x_offset-10, 100], 2)
+
+    # pygame.draw.rect(screen, BLACK, [30, 10, 120, 50], 2)
+    # pygame.draw.ellipse(screen, BLACK, [30, 10, 120, 50], 2)
+
+    # pygame.draw.polygon(screen, BLACK, [[500, 100], [
+    #                     300, 200], [600, 200]], 3)
+
+    # Select the font to use, size, bold, italics
+    font = pygame.font.SysFont('Calibri', 24, True, True)
+
+    # making timer in text
+    # itung total detik
+    total_seconds = frame_count // frame_rate
+
+    # itung total minute
+    minutes = total_seconds // 60
+
+    # pake modulus dapetin detik berapa
+    seconds = total_seconds % 60
+
+    # coba tambahin jam
+    jam = total_seconds // 3600
+
+    output_string = "Time: {0:02}:{1:02}:{2:02}".format(jam, minutes, seconds)
+    text = font.render(output_string, True, BLACK)
+    screen.blit(text, [350, 350])
+
+    # Render the text. "True" means anti-aliased text.
+    # Black is the color. The variable BLACK was defined
+    # above as a list of [0, 0, 0]
+    # Note: This line creates an image of the letters,
+    # but does not put it on the screen yet.
+    # score = 9693999
+    # text = font.render("HighScore:" + str(score), True, BLACK)
+    # screen.blit(text, [300, 350])
+
+    frame_count += 1
 
     pygame.display.flip()  # update screen dengan apa yg kita gambar
-
     clock.tick(60)  # limit clock game to 60 fps
-
 
 pygame.quit()  # close window and quit.
