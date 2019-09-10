@@ -1,3 +1,9 @@
+'''
+This is Just Scratch 
+i make for test code and learn
+
+'''
+
 
 # name = "Junio Akarda"
 # spasi = "  d"
@@ -88,14 +94,165 @@
 
 
 # creating first dictionary
-print("test dictionary!")
-kamus_berjalan = {
-    "xp": "experience",
-    "hp": "Health Player",
-    "mp": "Mana Player",
-    5: "position 5 noob"
+# print("test dictionary!")
+# kamus_berjalan = {
+#     "xp": "experience",
+#     "hp": "Health Player",
+#     "mp": "Mana Player",
+#     5: "position 5 noob"
 
-}
-print(kamus_berjalan["xp"])
-print(kamus_berjalan[5])
-print(kamus_berjalan.get("Xpe", "keyword ga ada"))
+# }
+# print(kamus_berjalan["xp"])
+# print(kamus_berjalan[5])
+# print(kamus_berjalan.get("Xpe", "keyword ga ada"))
+
+
+# making guessing game
+# secret_word = "bunny"
+# inputan = ""
+# attempt = 3
+# try1 = 1
+# while inputan != secret_word and try1 <= attempt:
+#     inputan = input("tebak kata depannya huruf b : ")
+#     print("attempt " + str(try1))
+#     print("%d left to try " % (attempt-try1))
+#     try1 += 1
+
+# if secret_word == inputan:
+#     print("berhasil hore !!!")
+# else:
+#     print("Anda Gagal , coba lagi !")
+
+
+# for
+# angka = range(10)  # range is iterable but not integer
+
+# mynum = iter(angka)
+# print(next(mynum))
+# print(next(mynum))
+# print(next(mynum))
+# print(next(mynum))
+
+
+# orang = "oraa oraa "
+# myorg = iter(orang)
+
+# print(next(myorg))
+# print(next(myorg))
+# print(next(myorg))
+# print(next(myorg))
+# print(next(myorg))
+# # string is iterable object
+
+
+# ----
+
+# # versi simple pangkat function
+# def pangkat(angka, pangkat):
+#     return angka ** pangkat
+
+
+# print(pangkat(3, 9))
+
+# # versi ribet loop
+# def raise_numb(numb, power):
+#     result = 1
+#     for i in range(power):
+#         result = result * numb
+#     return result
+
+# print(raise_numb(3, 9))
+
+# 2d list
+from sensai import *
+angka = [
+    [1, 2, 3],
+    [9, 1, 2],
+    [0, 1, 5]
+]
+
+# we can acces using row column
+print(angka[1][0])  # this will be print row = 1 and collumn 0, which is 9
+print(angka[2][2])
+
+# nested loop nyari angka di setiap kolom
+for baris in angka:
+    for kolom in baris:
+        print(kolom)
+
+
+# we make simple translator
+# setiap huruf vokal jadi z
+#dog  = dzg
+# def translate(kata):
+
+#     translation = ""
+#     for huruf in kata:
+#         if huruf.lower() in "aiueo":
+#             if huruf.isupper():
+#                 translation = translation + "Z"
+#             else:
+#                 translation = translation + "z"
+
+#         else:
+#             translation = translation + huruf
+
+#     return translation
+
+
+# print(translate(input("Masukkan kata: ")))
+
+
+# -- catching error using try and except , except can be specified and make them a special variable to define whats made error.
+# try:
+#     number = int(input("masukkan bilangan :"))
+#     kp = 10 / 0
+#     print(number)
+
+# except ZeroDivisionError as zerosucks:
+#     print("error", zerosucks)
+# except ValueError as err:
+#     print(err)  # print with the error description
+
+
+# relative path is based on current directory, and best practice to use it in same domain/web.
+# absolute path is based on root directory, it always start in the root directory, and is used to link to another domain/web except ours/
+
+
+# # open file a= append, w = write/create new/overwrite the old , r = read.
+
+# gamelist = open("index.html", "w")
+# gamelist.write("<h1>this created in the python compiler, omegalull<h1?")
+
+# gamelist = open("game.txt", "r")
+# print(gamelist.read())
+# gamelist = open("game.txt", "a")
+# gamelist.write("\nCSGO - Good Fps Game")
+# gamelist = open("game.txt", "r")
+# print(gamelist.read())
+# # or this print(gamelist.readlines())
+# gamelist.close()  # dont forget to close the door ^^
+
+
+# --------------------------------------------------------------
+
+# pip and external python module
+# we can download external python module using pip package manager, and the download will place in lib/site-packages.
+# we can easily import the module, we can create to by ourself. so considering you need to use module to fasten your works !
+
+
+sensei1 = sensei("John", 50, "Karate Teacher")
+
+print(sensei1.name)
+print(sensei1.age)
+print(sensei1.job)
+print("sensei name is", sensei1.senseiName())
+
+sensei1.name = "maddog"
+print(sensei1.name)
+del sensei1.age
+sensei1.age = 50
+print(sensei1.age)
+
+# class is like making other data type in python / template, than object is actually the representative of the class itself/the real object that use the template.
+# del for delete , modifiy just assign it to the value like sensei1.name = "bla bla"
