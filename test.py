@@ -1,5 +1,5 @@
 '''
-This is Just Scratch 
+This is Just Scratch
 i make for test code and learn
 
 '''
@@ -164,26 +164,26 @@ i make for test code and learn
 # print(raise_numb(3, 9))
 
 # 2d list
-from sensai import *
-angka = [
-    [1, 2, 3],
-    [9, 1, 2],
-    [0, 1, 5]
-]
+# from sensai import *
+# angka = [
+#     [1, 2, 3],
+#     [9, 1, 2],
+#     [0, 1, 5]
+# ]
 
-# we can acces using row column
-print(angka[1][0])  # this will be print row = 1 and collumn 0, which is 9
-print(angka[2][2])
+# # we can acces using row column
+# print(angka[1][0])  # this will be print row = 1 and collumn 0, which is 9
+# print(angka[2][2])
 
-# nested loop nyari angka di setiap kolom
-for baris in angka:
-    for kolom in baris:
-        print(kolom)
+# # nested loop nyari angka di setiap kolom
+# for baris in angka:
+#     for kolom in baris:
+#         print(kolom)
 
 
 # we make simple translator
 # setiap huruf vokal jadi z
-#dog  = dzg
+# dog  = dzg
 # def translate(kata):
 
 #     translation = ""
@@ -241,18 +241,126 @@ for baris in angka:
 # we can easily import the module, we can create to by ourself. so considering you need to use module to fasten your works !
 
 
-sensei1 = sensei("John", 50, "Karate Teacher")
+# sensei1 = sensei("John", 50, "Karate Teacher")
 
-print(sensei1.name)
-print(sensei1.age)
-print(sensei1.job)
-print("sensei name is", sensei1.senseiName())
+# print(sensei1.name)
+# print(sensei1.age)
+# print(sensei1.job)
+# print("sensei name is", sensei1.senseiName())
 
-sensei1.name = "maddog"
-print(sensei1.name)
-del sensei1.age
-sensei1.age = 50
-print(sensei1.age)
+# sensei1.name = "maddog"
+# print(sensei1.name)
+# del sensei1.age
+# sensei1.age = 50
+# print(sensei1.age)
 
-# class is like making other data type in python / template, than object is actually the representative of the class itself/the real object that use the template.
+# # class is like making other data type in python / template, than object is actually the representative of the class itself/the real object that use the template.
 # del for delete , modifiy just assign it to the value like sensei1.name = "bla bla"
+
+
+# multiple quiz test
+# class Question:
+
+#     def __init__(self, promp, answer):
+
+#         self.promp = promp
+#         self.answer = answer
+
+
+# pertanyaaan = [
+#     "\nWhat is the color of banana ? \na.Blue\nb.Yellow\nc.Black\n",
+#     "\nWhat is the color of sky ? \na.Blue\nb.Yellow\nc.Black\n",
+#     "\nWhat is the color of hair ? \na.Blue\nb.Yellow\nc.Black\n"
+# ]
+
+# Questions = [
+#     Question(pertanyaaan[0], "b"),
+#     Question(pertanyaaan[1], "a"),
+#     Question(pertanyaaan[2], "c")
+
+# ]
+# score = 0
+# for q in Questions:
+#     answer = input(q.promp)
+#     if answer == q.answer:
+#         score += 1
+# if score == 3:
+#     print("congrats perfect score !!")
+#     print("score : {}/{} correct".format(score, len(Questions)))
+# else:
+#     print("score : {}/{} correct".format(score, len(Questions)))
+
+
+# scratch
+
+# jumlah_arr = int(input("masukkin jumlah array:"))
+
+# array1 = []
+# for i in range(jumlah_arr):
+
+#     array1.append(int(input("masukkan array{}: ".format(i+1))))
+
+# print(array1)
+
+# test_2d = [
+#     [1, 2, 3],
+#     1, 4, 5,
+#     9, 2, 1
+
+# ]
+
+# print(len(test_2d[0]))
+
+# list1 = ["halo2", "hai", "3213331"]
+# angka = 0
+# bangka = 0
+# angka = list1[0]
+# bangka = list1[2]
+# list1[2] = angka
+# list1[0] = bangka
+
+# print(list1[-1])
+
+# input_kata = []
+
+# input_kata.append("masuk")
+# input_kata.append("pulang")
+# print(input_kata)
+
+# for i in range (2): #2x
+#     for j in index[i]: #5x
+#         if j.index() %2 == 0:
+#             result1 += j
+#         if j.index() %1 == 0:
+#             result2 += k  #h a c k e r
+#         PRINT (J,K)
+
+# input_n = int(input())
+# input_kata = []
+# for i in range(input_n):
+#     input_kata.append(input())
+# ganjil = []
+# genap = []
+
+index = [[1, 2, 3],
+         [2, 3, 2]
+
+         ]
+
+print(index[0][1]+index[0][0])
+
+#
+'''
+1,2,3,4      index[0,1,2]  => 0,0 , 0,1 , 0,2     0,1 , 0,2 , 0,3 
+4,5,6,4      index[1]     => 1,1                  1,2
+2,2,2,5      index[0,1,2] -> 1,0 , 1,1 , 1,2      1,1  , 1,2, 1,3 
+total 16
+
+loop for 4 =
+
+
+fibonnaci = a , b, ab ,bab, abbab ,
+            0 , 1 , 
+
+
+'''
